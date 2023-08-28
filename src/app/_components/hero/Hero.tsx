@@ -26,19 +26,33 @@ const Hero = (props: Props) => {
         {/* Content Container Mobile*/}
         <div className="relative flex h-full w-full flex-col justify-center text-light md:hidden">
           {/* Top */}
-          <div className="pl-[10%]">
+          <div className="px-[10%]">
             <h2 className="relative top-3 text-xl font-light tracking-wide">
               this website is about
             </h2>
             <h1 className="text-8xl leading-[0.9] tracking-wide">sean fong</h1>
           </div>
           {/* Line */}
-          <div className="py-7 pl-[30%] pr-[10%]">
+          <div className="relative my-7 pl-[30%] pr-[10%]">
+            <Image
+              src="/icons/hero/hero_x.svg"
+              alt="hero gradient"
+              width={16}
+              height={16}
+              className="absolute -top-6 right-[10%]"
+            />
             <hr className="h-0.5 rounded-full border-none bg-light" />
           </div>
           {/* Bottom */}
-          <div className="flex">
-            <div className="relative h-10 w-10"></div>
+          <div className="flex justify-center">
+            {/* Icon container */}
+            <Image
+              src="/icons/hero/hero_icon.svg"
+              alt="hero gradient"
+              width={96}
+              height={96}
+            />
+            {/* Links */}
           </div>
         </div>
       </div>
