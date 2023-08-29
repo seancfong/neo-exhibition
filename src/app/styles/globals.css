@@ -4,6 +4,6 @@
 
 @layer components {
   .component-section {
-    @apply mx-6 grid grid-cols-5 gap-2;
+    @apply px-6;
   }
 }
