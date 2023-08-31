@@ -8,7 +8,7 @@ const H = ({ children }: { children: string }): JSX.Element => (
 
 const About = (props: Props) => {
   return (
-    <section className="component-section flex h-fit w-full items-center justify-center">
+    <section className="component-section mt-10 flex h-fit w-full items-center justify-center">
       {/* Content Container Mobile */}
       <div className="flex h-full w-full max-w-md flex-col items-center lg:hidden">
         <div className="relative h-0 w-3/4 rounded-lg rounded-bl-none bg-[#636363] bg-opacity-40 pt-[75%] sm:w-3/5 sm:pt-[60%]">
