@@ -7,33 +7,34 @@ type HeroProps = {
   heroLinks: Array<HeroSectionLink>;
 };
 
-const Hero = ({ heroLinks }: HeroProps) => {
+const Hero = ({ heroLinks }: HeroProps): JSX.Element => {
   return (
-    <section className="component-section h-[500px] min-h-screen py-5">
+    <section className="component-section flex items-center">
       {/* Hero container */}
-      <div className="relative flex h-full justify-center overflow-y-hidden">
+      <div className="relative flex h-full max-h-[1000px] w-full justify-center overflow-y-hidden">
         {/* Background Image container */}
         <div className="absolute left-0 top-0 h-full w-full">
           <Image
-            src="/images/hero-waves.jpg"
+            src="/images/hero-waves.webp"
             alt="hero gradient"
             fill
-            className="opacity-9 rounded-lg object-cover"
+            className="rounded-lg object-cover opacity-90"
           />
           <Image
-            src="/images/hero-gradient.jpg"
+            src="/images/hero-gradient.webp"
             alt="hero gradient"
             fill
+            priority
             className="rounded-lg object-cover opacity-75"
           />
         </div>
         {/* Content Container Mobile*/}
         <div className="relative flex h-full w-full flex-col justify-center text-light lg:hidden">
           {/* Top */}
-          <div className="px-[10%]">
-            <h2 className="relative top-3 text-xl font-light tracking-wide">
+          <div className="px-[10%] md:px-[15%]">
+            <p className="relative top-3 text-xl font-light tracking-wide md:text-2xl">
               this website is about
-            </h2>
+            </p>
             <h1 className="text-8xl leading-[0.9] tracking-wide">sean fong</h1>
           </div>
           {/* Line */}
@@ -65,9 +66,9 @@ const Hero = ({ heroLinks }: HeroProps) => {
         <div className="relative top-[10vh] hidden h-full w-full max-w-6xl flex-col justify-center text-light lg:flex">
           {/* Top */}
           <div className="px-[12%]">
-            <h2 className="relative top-3 text-2xl font-light tracking-wider">
+            <p className="relative top-3 text-2xl font-light tracking-wider">
               this website is about
-            </h2>
+            </p>
             <h1 className="text-9xl leading-[0.9] tracking-wide">sean fong</h1>
           </div>
           {/* Line */}

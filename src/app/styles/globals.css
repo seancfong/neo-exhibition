@@ -4,6 +4,7 @@
 
 @layer components {
   .component-section {
-    @apply px-6;
+    @apply min-h-screen px-6 py-5;
+    height: 500px;
   }
 }

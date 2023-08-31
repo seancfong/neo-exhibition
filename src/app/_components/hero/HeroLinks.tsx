@@ -9,6 +9,7 @@ type HeroLinkProps = {
 const HeroLinks = ({ links }: HeroLinkProps) => {
   return (
     <>
+      {/* Mobile Links */}
       <ul className="flex flex-col gap-1 lg:hidden">
         {links.map((link: HeroSectionLink, i) => (
           <li key={link?.key ?? i} className="w-fit">
@@ -16,13 +17,14 @@ const HeroLinks = ({ links }: HeroLinkProps) => {
               href={link?.linkURL}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-fit rounded-lg bg-[#222222] bg-opacity-20 py-1 pl-[4vw] pr-[10vw] text-2xl font-light lowercase tracking-wider text-light"
+              className="block w-fit rounded-lg bg-[#222222] bg-opacity-20 py-1 pl-[4vw] pr-[10vw] text-2xl font-light lowercase tracking-wider text-light md:text-3xl"
             >
               {link?.name}
             </Link>
           </li>
         ))}
       </ul>
+      {/* Desktop Links */}
       <ul className="hidden gap-2 rounded-lg bg-[#222222] bg-opacity-20 lg:flex">
         {links.map((link: HeroSectionLink, i) => (
           <>
@@ -39,7 +41,11 @@ const HeroLinks = ({ links }: HeroLinkProps) => {
                 {link?.name}
               </Link>
             </li>
-            <li key={`bullet-${i}`} aria-hidden={true} className="self-center">
+            <li
+              key={`bullet-${i}`}
+              aria-hidden={true}
+              className="self-center text-gray-300"
+            >
               {i !== links.length - 1 && <span>&#8226;</span>}
             </li>
           </>

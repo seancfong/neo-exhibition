@@ -1,6 +1,7 @@
 import { client } from "@/lib/sanity/client";
 import { sanityResponseType } from "@/types/types";
 import Hero from "@/components/hero/Hero";
+import About from "@/components/about/About";
 
 async function fetchCMSData() {
   const postQuery = `*[_type == "showcase"]{
@@ -20,13 +21,14 @@ export default async function Home() {
   const { heroLinks, projects } = sanityData;
 
   return (
-    <main className="flex min-h-screen flex-col items-center overflow-x-hidden bg-dark font-outfit">
+    <main className="flex min-h-screen flex-col items-center overflow-hidden overflow-x-hidden bg-dark font-outfit">
       {/* Content Wrapper*/}
       <div className="w-full max-w-screen-2xl">
         {/* Hero */}
         <Hero heroLinks={heroLinks} />
 
         {/* About */}
+        <About />
 
         {/* Showcase */}
       </div>
