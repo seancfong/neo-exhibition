@@ -29,7 +29,7 @@ const Hero = ({ heroLinks }: HeroProps): JSX.Element => {
           />
         </div>
         {/* Content Container Mobile*/}
-        <div className="relative flex h-full w-full flex-col justify-center text-light lg:hidden">
+        <div className="overflow-x-none relative flex h-full w-full flex-col justify-center text-light lg:hidden">
           {/* Top */}
           <div className="px-[10%] md:px-[15%]">
             <p className="relative top-3 text-xl font-light tracking-wide md:text-2xl">

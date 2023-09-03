@@ -37,8 +37,8 @@ const About = (props: Props) => {
           <p className="text-xl font-light leading-8 tracking-wide text-[#A0A0A0] sm:text-2xl sm:leading-9">
             I am a third-year student at <H>UC Irvine</H> majoring in{" "}
             <H>Computer Science</H> with a minor in <H>Informatics</H>. I enjoy
-            creating innovative and practical <H>applications</H> for the{" "}
-            <H>web</H>, and I sometimes write about them too!
+            creating innovative and practical <H>applications</H> people can{" "}
+            <H>interact</H> with, and I sometimes write about them too!
           </p>
         </div>
       </div>
@@ -76,8 +76,8 @@ const About = (props: Props) => {
         <p className="row-start-3 rounded-2xl rounded-bl-none rounded-tl-none bg-[#222222] bg-opacity-40 pb-3 pl-5 pr-20 pt-5 text-3xl font-light leading-10 tracking-wide text-[#A0A0A0]">
           I am a third-year student at <H>UC Irvine</H> majoring in{" "}
           <H>Computer Science</H> with a minor in <H>Informatics</H>. I enjoy
-          creating innovative and practical <H>applications</H> for the{" "}
-          <H>web</H>, and I sometimes write about them too!
+          creating innovative and practical <H>applications</H> people can{" "}
+          <H>interact</H> with, and I sometimes write about them too!
         </p>
       </div>
     </section>
