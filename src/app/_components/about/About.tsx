@@ -12,13 +12,13 @@ const H = ({ children }: { children: string }): JSX.Element => (
 
 const About = ({ links }: AboutProps) => {
   return (
-    <section className="component-section mt-10 flex h-fit w-full items-center justify-center overflow-x-hidden">
+    <section className="component-section flex h-fit w-full items-center justify-center overflow-x-hidden">
       {/* Content Container Mobile */}
-      <div className="grid h-full w-full max-w-md grid-cols-[repeat(2,1fr)] flex-col items-center lg:hidden">
+      <div className="grid h-full w-full max-w-md grid-cols-[repeat(2,1fr)] flex-col items-center pt-10 lg:hidden">
         {/* White Panel (r1, c1) */}
-        <div className="relative -right-6 z-0 col-start-1 col-end-2 row-start-1 row-end-6 h-[105%] w-8/12 justify-self-end rounded-lg bg-panel-light" />
+        <div className="relative -right-6 -top-6 z-0 col-start-1 col-end-2 row-start-1 row-end-6 h-full w-4/5 justify-self-end rounded-lg bg-panel-light" />
         {/* Subtitle (r2, c2) */}
-        <h2 className="col-span-2 col-start-1 row-start-2 justify-self-end pr-[8vw] text-2xl font-light leading-8 tracking-wide text-dim sm:pr-5 sm:text-3xl">
+        <h2 className="relative z-10 col-span-2 col-start-1 row-start-2 justify-self-end pr-[8vw] text-2xl font-light leading-8 tracking-wide text-dim sm:pr-5 sm:text-3xl">
           hello, my name is
         </h2>
         {/* Image (r3, c1) */}
@@ -33,14 +33,14 @@ const About = ({ links }: AboutProps) => {
           </div>
         </div>
         {/* Title (r3, c2) */}
-        <div className="col-start-2 row-start-3 w-fit place-self-start pb-2 pr-[8vw] sm:pr-5">
-          <h2 className="bg-gradient-to-r from-cpink to-cblue bg-clip-text pb-5 text-right text-6xl font-light lowercase tracking-wide text-transparent sm:text-7xl">
+        <div className="relative z-10 col-start-2 row-start-3 w-fit place-self-start pb-2 pr-[8vw] sm:pr-5">
+          <h2 className="bg-gradient-to-r from-cpink to-cblue bg-clip-text pb-5 text-right text-[12vw] font-light lowercase leading-[12vw] tracking-wide text-transparent sm:text-7xl sm:leading-[5rem]">
             Sean Fong
           </h2>
           <Image
             src="/icons/about/about_decor.svg"
             alt="about decoration"
-            width={124}
+            width={90}
             height={20}
             className="ml-auto mr-0"
           />
@@ -52,7 +52,7 @@ const About = ({ links }: AboutProps) => {
           </p>
         </div>
         {/* Bottom Right Hero Links (r5, c1)*/}
-        <div className="relative z-10 col-span-2 col-start-1 row-start-5 pl-[8vw] pt-6 sm:pl-5">
+        <div className="relative z-10 col-span-2 col-start-1 row-start-5 pl-5 pt-6 sm:pl-10">
           <AboutLinks links={links} />
         </div>
       </div>
