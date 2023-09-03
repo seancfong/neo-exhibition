@@ -1,12 +1,16 @@
+import AboutLinks from "@/components/about/AboutLinks";
+import { HeroSectionLink } from "@/types/types";
 import Image from "next/image";
 
-type Props = {};
+type AboutProps = {
+  links: Array<HeroSectionLink>;
+};
 
 const H = ({ children }: { children: string }): JSX.Element => (
   <span className="text-white">{children}</span>
 );
 
-const About = (props: Props) => {
+const About = ({ links }: AboutProps) => {
   return (
     <section className="component-section mt-10 flex h-fit w-full items-center justify-center">
       {/* Content Container Mobile */}
@@ -43,11 +47,11 @@ const About = (props: Props) => {
         </div>
       </div>
       {/* Content Container Desktop */}
-      <div className="hidden w-full max-w-6xl grid-cols-[1fr_2fr] lg:grid">
-        {/* White Panel */}
-        <div className="relative bottom-[20%] z-0 col-start-1 col-end-2 row-start-1 row-end-5 h-[130%] w-8/12 justify-self-end rounded-lg bg-[#636363] bg-opacity-40" />
-        {/* Top Left Image container */}
-        <div className="relative z-20 col-start-1 col-end-2 row-start-2 row-end-4 p-10 pt-5">
+      <div className="hidden w-full max-w-6xl grid-cols-[1fr_2fr] py-16 lg:grid">
+        {/* White Panel (r1, c1)*/}
+        <div className="relative bottom-[15%] z-0 col-start-1 col-end-2 row-start-1 row-end-5 h-[110%] w-8/12 justify-self-end rounded-lg bg-panel-light" />
+        {/* Top Left Image container (r2, c1)*/}
+        <div className="relative z-20 col-start-1 col-end-2 row-start-2 row-end-4 p-10">
           {/* Square container */}
           <div className="relative h-full w-full p-5 pt-[100%]">
             <Image
@@ -66,19 +70,28 @@ const About = (props: Props) => {
             />
           </div>
         </div>
-        {/* Top Right Title */}
-        <h2 className="row-start-2 w-fit self-end bg-gradient-to-r from-cpink to-cblue bg-clip-text pl-5 text-8xl font-light lowercase tracking-wide text-transparent">
-          Hello
-        </h2>
-        {/* Bottom Left Image Background */}
-        <div className="z-10 col-start-1 col-end-2 row-start-3 row-end-4 rounded-2xl rounded-br-none rounded-tr-none bg-[#222222] bg-opacity-40" />
-        {/* Bottom Right Paragraph container */}
-        <p className="row-start-3 rounded-2xl rounded-bl-none rounded-tl-none bg-[#222222] bg-opacity-40 pb-3 pl-5 pr-20 pt-5 text-3xl font-light leading-10 tracking-wide text-[#A0A0A0]">
+        {/* Top Right Title (r2, c2)*/}
+        <div className="row-start-2 w-fit self-end pl-5">
+          <h2 className="text-3xl font-light lowercase leading-10 tracking-wide text-dim">
+            Hello, my name is
+          </h2>
+          <h1 className="bg-gradient-to-r from-cpink to-cblue bg-clip-text pb-4 text-8xl font-light lowercase tracking-wide text-transparent">
+            Sean Fong
+          </h1>
+        </div>
+        {/* Bottom Left Image Background (r3, c1)*/}
+        <div className="z-10 col-start-1 col-end-2 row-start-3 row-end-4 rounded-2xl rounded-br-none rounded-tr-none bg-panel-darkest" />
+        {/* Bottom Right Paragraph container (r3, c2)*/}
+        <p className="row-start-3 rounded-2xl rounded-bl-none rounded-tl-none bg-panel-darkest pb-9 pl-5 pr-20 pt-5 text-3xl font-light leading-10 tracking-wide text-dim">
           I am a third-year student at <H>UC Irvine</H> majoring in{" "}
           <H>Computer Science</H> with a minor in <H>Informatics</H>. I enjoy
           creating innovative and practical <H>applications</H> people can{" "}
           <H>interact</H> with, and I sometimes write about them too!
         </p>
+        {/* Bottom Right Hero Links (r4, c2)*/}
+        <div className="col-start-2 row-start-4 flex justify-end pt-6">
+          <AboutLinks links={links} />
+        </div>
       </div>
     </section>
   );

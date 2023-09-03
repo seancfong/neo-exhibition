@@ -1,6 +1,6 @@
 import { client } from "@/lib/sanity/client";
 import { sanityResponseType } from "@/types/types";
-import Hero from "@/components/hero/Hero";
+import Image from "next/image";
 import About from "@/components/about/About";
 import Experience from "@/components/experience/Experience";
 
@@ -24,19 +24,26 @@ export default async function Home() {
 
   return (
     <main className="flex h-screen flex-col items-center overflow-hidden overflow-x-hidden bg-dark font-outfit">
-      {/* Content Wrapper*/}
-      <div className="w-full overflow-auto">
-        {/* Hero */}
-        <Hero heroLinks={heroLinks} />
+      {/* Background Image */}
+      <div className="fixed left-0 top-0 h-full w-full">
+        <Image
+          src="/images/bg-waves.webp"
+          alt=""
+          fill
+          className="object-cover opacity-20"
+        />
+      </div>
 
+      {/* Content Wrapper*/}
+      <div className="z-10 w-full overflow-auto">
         {/* About */}
-        <About />
+        <About links={heroLinks} />
 
         {/* Experience */}
         <Experience experiences={experiences} />
 
         {/* Projects */}
-        <About />
+        <About links={heroLinks} />
 
         {/* Footer */}
       </div>

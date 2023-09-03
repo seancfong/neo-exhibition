@@ -10,8 +10,13 @@ module.exports = {
       colors: {
         dark: "#3d3d3d",
         light: "#f4f4f4",
+        dim: "#a0a0a0",
         cpink: "#be93c5",
         cblue: "#7bb4cc",
+        "cta-left": "rgba(132,148,166,0.60)",
+        "cta-right": "rgba(101,109,169,0.60)",
+        "panel-light": "rgba(99,99,99,0.4)",
+        "panel-darkest": "rgba(34,34,34,0.4)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
