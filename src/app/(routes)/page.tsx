@@ -6,9 +6,18 @@ import Experience from "@/components/experience/Experience";
 
 async function fetchCMSData() {
   const postQuery = `*[_type == "showcase"]{
-    heroLinks,
+    heroLinks[] {
+      ...,
+      reactIcon->
+    },
     experiences[]->,
-    projects[]->
+    projects[]-> {
+      ...,
+      links[] {
+        ...,
+        reactIcon->
+      }
+    }
   }[0]
   `;
   const data = await client.fetch(postQuery);

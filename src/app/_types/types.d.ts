@@ -11,12 +11,21 @@ export interface sanityResponseType {
 }
 
 // ===========================================
+// SANITY REACT ICON
+// ===========================================
+export interface SanityReactIcon {
+  library: string;
+  name: string;
+}
+
+// ===========================================
 // HERO SECTION
 // ===========================================
 export interface HeroSectionLink {
   name: string;
   linkURL: string;
   key: string;
+  reactIcon: SanityReactIcon;
 }
 
 // ===========================================

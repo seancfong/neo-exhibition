@@ -1,3 +1,4 @@
+import DynamicIcon from "@/components/icons/DynamicIcon";
 import { HeroSectionLink } from "@/types/types";
 import Link from "next/link";
 import React from "react";
@@ -10,16 +11,22 @@ const HeroLinks = ({ links }: HeroLinkProps) => {
   return (
     <>
       {/* Mobile Links */}
-      <ul className="flex flex-col gap-1 lg:hidden">
+      <ul className="flex gap-3 text-3xl lg:hidden">
         {links.map((link: HeroSectionLink, i) => (
-          <li key={link?.key ?? i} className="w-fit">
+          <li
+            key={link?.key ?? i}
+            className="rounded-lg bg-gradient-to-r from-cta-left to-cta-right"
+          >
             <Link
               href={link?.linkURL}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-fit rounded-lg bg-[#222222] bg-opacity-20 py-1 pl-[4vw] pr-[10vw] text-2xl font-light lowercase tracking-wider text-light md:text-3xl"
+              className="block w-fit rounded-lg bg-[#222222] bg-opacity-20 p-4 font-light lowercase tracking-wider text-light"
             >
-              {link?.name}
+              <DynamicIcon
+                library={link?.reactIcon?.library}
+                icon={link?.reactIcon?.name}
+              />
             </Link>
           </li>
         ))}
