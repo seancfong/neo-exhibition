@@ -11,7 +11,7 @@ const ExperienceCard = ({ experienceData }: ExperienceCardType) => {
 
   console.log(experienceData);
 
-  return <div>{position}</div>;
+  return <div className="w-[600px]">{position}</div>;
 };
 
 export default ExperienceCard;

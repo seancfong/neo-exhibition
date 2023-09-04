@@ -32,7 +32,7 @@ export default async function Home() {
   const { heroLinks, experiences, projects } = sanityData;
 
   return (
-    <main className="flex h-screen flex-col items-center overflow-hidden overflow-x-hidden bg-dark font-outfit">
+    <main className="items-center bg-dark font-outfit">
       {/* Background Image */}
       <div className="fixed left-0 top-0 h-full w-full">
         <Image
@@ -44,7 +44,7 @@ export default async function Home() {
       </div>
 
       {/* Content Wrapper*/}
-      <div className="z-10 w-full overflow-auto">
+      <div className="z-10 w-full">
         {/* About */}
         <About links={heroLinks} />
 
