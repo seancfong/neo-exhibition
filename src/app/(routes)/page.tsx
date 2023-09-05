@@ -8,17 +8,27 @@ async function fetchCMSData() {
   const postQuery = `*[_type == "showcase"]{
     heroLinks[] {
       ...,
-      reactIcon->
+      reactIcon->{name, library},
     },
-    experiences[]->,
+    experiences[]-> {
+      ...,
+      skills[]-> {
+        ...,
+        reactIcon->{name, library},
+      }
+    },
     projects[]-> {
       ...,
       links[] {
         ...,
+        reactIcon->{name, library},
+      },
+      techStack[]-> {
+        ...,
         reactIcon->
       }
     }
-  }[0]
+  }[0]  
   `;
   const data = await client.fetch(postQuery);
 

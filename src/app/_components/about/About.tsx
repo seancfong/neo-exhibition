@@ -34,9 +34,9 @@ const About = ({ links }: AboutProps) => {
         </div>
         {/* Title (r3, c2) */}
         <div className="relative z-10 col-start-2 row-start-3 w-fit place-self-start pb-2 pr-[8vw] sm:pr-5">
-          <h2 className="bg-gradient-to-r from-cpink to-cblue bg-clip-text pb-5 text-right text-[12vw] font-light lowercase leading-[12vw] tracking-wide text-transparent sm:text-7xl sm:leading-[5rem]">
+          <h1 className="bg-gradient-to-r from-cpink to-cblue bg-clip-text pb-5 text-right text-[12vw] font-light lowercase leading-[12vw] tracking-wide text-transparent sm:text-7xl sm:leading-[5rem]">
             Sean Fong
-          </h2>
+          </h1>
           <Image
             src="/icons/about/about_decor.svg"
             alt="about decoration"

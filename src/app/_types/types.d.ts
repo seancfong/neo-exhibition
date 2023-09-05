@@ -19,6 +19,15 @@ export interface SanityReactIcon {
 }
 
 // ===========================================
+// SKILLS
+// ===========================================
+export type SkillType = {
+  name: string;
+  reactIcon: SanityReactIcon;
+  _id: string;
+};
+
+// ===========================================
 // HERO SECTION
 // ===========================================
 export interface HeroSectionLink {
@@ -33,6 +42,7 @@ export interface HeroSectionLink {
 // ===========================================
 interface ExperienceBullet {
   content: string;
+  _key: string;
 }
 
 export interface ExperienceType {
@@ -41,8 +51,10 @@ export interface ExperienceType {
   subtitle: string;
   startDate: string;
   endDate: string;
+  featuredImage: SanitySourceImage;
   companyLogo: SanityImageSource;
   bullets: Array<ExperienceBullet>;
+  skills: Array<SkillType>;
 }
 
 // ===========================================
