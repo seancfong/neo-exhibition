@@ -18,10 +18,9 @@ const Experience = ({ experiences }: ExperienceProps) => {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["10vh", `${experiences?.length * 100}vh`],
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-60%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-90%"]);
 
   return (
     <section
@@ -29,11 +28,9 @@ const Experience = ({ experiences }: ExperienceProps) => {
       style={{ height: `${experiences?.length * 150}vh` }}
       ref={targetRef}
     >
-      {/* Title Container Mobile */}
-      <div className="block pl-6 lg:hidden"></div>
       {/* Track Mobile */}
-      <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden text-light lg:hidden">
-        <h2 className="bg-gradient-to-r from-cpink to-cblue bg-clip-text py-2 pl-6 text-[12vw] font-light lowercase leading-[12vw] tracking-wide text-transparent sm:text-7xl sm:leading-[5rem]">
+      <div className="sticky top-0 mx-auto flex h-screen max-w-[1440px] flex-col justify-center overflow-hidden text-light">
+        <h2 className="bg-gradient-to-r from-cpink to-cblue bg-clip-text py-2 pl-6 text-[12vw] font-light lowercase leading-[12vw] tracking-wide text-transparent sm:text-7xl sm:leading-[5rem] lg:pb-3 lg:text-8xl 2xl:pb-5">
           experiences
         </h2>
         {/* Decoration Track */}
@@ -47,6 +44,7 @@ const Experience = ({ experiences }: ExperienceProps) => {
           {experiences?.map((exp, i) => (
             <ExperienceCard experienceData={exp} key={exp?._id ?? i} />
           ))}
+          <div>the end is here</div>
         </motion.div>
       </div>
     </section>

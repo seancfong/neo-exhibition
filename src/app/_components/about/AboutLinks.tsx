@@ -43,7 +43,7 @@ const HeroLinks = ({ links }: HeroLinkProps) => {
                 href={link?.linkURL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-fit px-8 py-2 text-3xl"
+                className="block w-fit px-8 py-2 text-2xl 2xl:text-3xl"
               >
                 {link?.name}
               </Link>

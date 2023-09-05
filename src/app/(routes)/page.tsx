@@ -44,7 +44,7 @@ export default async function Home() {
   return (
     <main className="items-center bg-dark font-outfit">
       {/* Background Image */}
-      <div className="fixed left-0 top-0 h-full w-full">
+      <div className="fixed left-0 top-0 z-0 h-full w-full">
         <Image
           src="/images/bg-waves.webp"
           alt=""
@@ -54,7 +54,7 @@ export default async function Home() {
       </div>
 
       {/* Content Wrapper*/}
-      <div className="z-10 w-full">
+      <div className="relative z-10 w-full">
         {/* About */}
         <About links={heroLinks} />
 

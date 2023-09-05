@@ -83,7 +83,7 @@ const About = ({ links }: AboutProps) => {
         </div>
         {/* Top Right Title (r2, c2)*/}
         <div className="row-start-2 w-fit self-end pl-5">
-          <h2 className="text-3xl font-light lowercase leading-10 tracking-wide text-dim">
+          <h2 className="text-2xl font-light lowercase leading-10 tracking-wide text-dim 2xl:text-3xl">
             Hello, my name is
           </h2>
           <h1 className="bg-gradient-to-r from-cpink to-cblue bg-clip-text pb-4 text-8xl font-light lowercase tracking-wide text-transparent">
@@ -93,7 +93,7 @@ const About = ({ links }: AboutProps) => {
         {/* Bottom Left Image Background (r3, c1)*/}
         <div className="z-10 col-start-1 col-end-2 row-start-3 row-end-4 rounded-2xl rounded-br-none rounded-tr-none bg-panel-darkest" />
         {/* Bottom Right Paragraph container (r3, c2)*/}
-        <p className="row-start-3 rounded-2xl rounded-bl-none rounded-tl-none bg-panel-darkest pb-9 pl-5 pr-20 pt-5 text-3xl font-light leading-10 tracking-wide text-dim">
+        <p className="row-start-3 rounded-2xl rounded-bl-none rounded-tl-none bg-panel-darkest pb-3 pl-5 pr-20 pt-5 text-2xl font-light leading-9 tracking-wide text-dim 2xl:pb-9 2xl:text-3xl 2xl:leading-10">
           <AboutText />
         </p>
         {/* Bottom Right Hero Links (r4, c2)*/}
