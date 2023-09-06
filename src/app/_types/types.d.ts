@@ -61,6 +61,23 @@ export interface ExperienceType {
 // PROJECT SECTION
 // ===========================================
 export interface ProjectType {
+  _id: string;
   title: string;
   subtitle: string;
+  featuredImage: SanitySourceImage;
+  techStack: Array<SkillType>;
+  description: any;
+  links: Array<ProjectLink>;
+  date: string;
+  award?: Array<ProjectAward>;
 }
+
+export type ProjectLink = {
+  linkURL: string;
+  reactIcon: SanityReactIcon;
+};
+
+type ProjectAward = {
+  awardDescription: string;
+  organization: string;
+};

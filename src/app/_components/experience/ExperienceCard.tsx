@@ -18,8 +18,6 @@ const ExperienceCard = ({ experienceData }: ExperienceCardType) => {
     skills,
   } = experienceData;
 
-  console.log(experienceData);
-
   return (
     <>
       {/* Mobile Card */}
@@ -64,11 +62,11 @@ const ExperienceCard = ({ experienceData }: ExperienceCardType) => {
               fill
               className="-z-20 rounded-lg rounded-br-none object-cover"
             />
-            <div className="absolute left-0 top-0 -z-10 h-full w-full rounded-lg rounded-br-none bg-gradient-to-r from-[rgba(41,41,41,0.6)] to-[rgba(91,84,84,0.3)]" />
+            <div className="absolute left-0 top-0 -z-10 h-full w-full rounded-lg rounded-br-none bg-gradient-to-r from-[rgba(41,41,41,0.8)] to-[rgba(91,84,84,0.3)] backdrop-blur-[2px]" />
           </div>
-          <p className="text-3xl font-light leading-8 tracking-wide sm:text-4xl lg:text-5xl 2xl:text-6xl">
+          <h4 className="text-3xl font-light leading-8 tracking-wide sm:text-4xl lg:text-5xl 2xl:text-6xl">
             {position}
-          </p>
+          </h4>
           <p className="text-sm font-light tracking-wide sm:text-base lg:text-2xl">
             {subtitle}
           </p>
@@ -94,12 +92,12 @@ const ExperienceCard = ({ experienceData }: ExperienceCardType) => {
             {skills?.map((skill, i) => {
               const { _id, name } = skill;
               return (
-                <>
-                  <li key={_id}>{name}</li>
-                  <li aria-hidden={true}>
+                <li key={_id}>
+                  <span>{name}</span>
+                  <span aria-hidden={true} className="pl-3">
                     {i !== skills.length - 1 && <span>&#8226;</span>}
-                  </li>
-                </>
+                  </span>
+                </li>
               );
             })}
           </ul>

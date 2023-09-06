@@ -3,6 +3,7 @@ import { sanityResponseType } from "@/types/types";
 import Image from "next/image";
 import About from "@/components/about/About";
 import Experience from "@/components/experience/Experience";
+import Projects from "@/components/projectlist/Projects";
 
 async function fetchCMSData() {
   const postQuery = `*[_type == "showcase"]{
@@ -25,10 +26,12 @@ async function fetchCMSData() {
       },
       techStack[]-> {
         ...,
-        reactIcon->
+        reactIcon->{name, library}
       }
     }
-  }[0]  
+  }[0]
+  
+  
   `;
   const data = await client.fetch(postQuery);
 
@@ -62,7 +65,7 @@ export default async function Home() {
         <Experience experiences={experiences} />
 
         {/* Projects */}
-        <About links={heroLinks} />
+        <Projects projects={projects} />
 
         {/* Footer */}
       </div>
