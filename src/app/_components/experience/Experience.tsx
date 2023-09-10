@@ -24,7 +24,7 @@ const Experience = ({ experiences }: ExperienceProps) => {
     >
       {/* Track Mobile */}
       <div className="sticky top-0 mx-auto flex h-screen max-w-[1440px] flex-col justify-center overflow-hidden text-light">
-        <h2 className="w-fit bg-gradient-to-r from-cpink to-cblue bg-clip-text py-2 pl-6 text-[12vw] font-light lowercase leading-[12vw] tracking-wide text-transparent sm:text-7xl sm:leading-[5rem] lg:pb-3 lg:text-8xl 2xl:pb-5">
+        <h2 className="w-fit bg-gradient-to-r from-cpink to-cblue bg-clip-text py-2 pl-6 text-[12vw] font-light lowercase leading-[12vw] tracking-wide text-transparent sm:text-7xl sm:leading-[5rem] lg:pb-3 lg:text-7xl 2xl:pb-5 2xl:text-8xl">
           Experiences
         </h2>
         {/* Decoration Track */}

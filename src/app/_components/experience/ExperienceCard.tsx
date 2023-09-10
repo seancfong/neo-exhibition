@@ -21,7 +21,7 @@ const ExperienceCard = ({ experienceData }: ExperienceCardType) => {
   return (
     <>
       {/* Mobile Card */}
-      <div className="relative z-10 grid h-fit max-h-[80vh] min-w-[330px] max-w-[min(90vw,600px)] flex-1 grid-cols-5 grid-rows-[auto_auto_1fr] lg:max-w-4xl">
+      <div className="relative z-10 grid h-fit max-h-[80vh] min-w-[330px] max-w-[min(90vw,600px)] flex-1 grid-cols-5 grid-rows-[auto_auto_1fr] lg:max-w-4xl lg:overflow-y-auto">
         {/* Start & End Date (r1, c1) */}
         <div className="col-start-1 row-start-1 flex h-fit w-fit justify-end gap-2 justify-self-end overflow-x-visible pb-3 pr-2 pt-10">
           {/* Date Container */}
@@ -74,7 +74,7 @@ const ExperienceCard = ({ experienceData }: ExperienceCardType) => {
         {/* White panel (r2, c1) */}
         <div className="row-span-2 row-start-2 w-5 justify-self-end rounded-l-lg bg-panel-light lg:w-10" />
         {/* Bullets & Skills (r3, c2) */}
-        <div className="col-start-2 col-end-6 row-start-3 overflow-y-auto rounded-lg rounded-tl-none rounded-tr-3xl bg-panel-darkest p-5 pt-3">
+        <div className="col-start-2 col-end-6 row-start-3 rounded-br-lg bg-panel-darkest p-5 pt-3">
           <ul className="list-inside font-light tracking-wider sm:text-lg lg:text-xl 2xl:text-3xl">
             {bullets.map((bullet) => {
               const { _key, content } = bullet;
