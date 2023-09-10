@@ -14,7 +14,11 @@ const Experience = ({ experiences }: ExperienceProps) => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-90%"]);
+  const x = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["0%", `-${(experiences?.length * 100) / (experiences?.length + 1)}%`],
+  );
 
   return (
     <section
