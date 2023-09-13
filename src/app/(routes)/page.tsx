@@ -4,6 +4,7 @@ import Image from "next/image";
 import About from "@/components/about/About";
 import Experience from "@/components/experience/Experience";
 import Projects from "@/components/projectlist/Projects";
+import Navbar from "@/components/navbar/Navbar";
 
 async function fetchCMSData() {
   const postQuery = `*[_type == "showcase"]{
@@ -55,6 +56,8 @@ export default async function Home() {
           className="object-cover opacity-20"
         />
       </div>
+
+      <Navbar />
 
       {/* Content Wrapper*/}
       <div className="relative z-10 w-full">

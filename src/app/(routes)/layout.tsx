@@ -1,3 +1,4 @@
+import { NavbarContextProvider } from "@/app/_context/NavbarContext";
 import "@/app/styles/globals.css";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
@@ -20,7 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable} font-sans`}>{children}</body>
+      <NavbarContextProvider>
+        <body className={`${outfit.variable} font-sans`}>{children}</body>
+      </NavbarContextProvider>
     </html>
   );
 }

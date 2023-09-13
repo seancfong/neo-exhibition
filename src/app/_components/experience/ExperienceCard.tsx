@@ -21,7 +21,7 @@ const ExperienceCard = ({ experienceData }: ExperienceCardType) => {
   return (
     <>
       {/* Mobile Card */}
-      <div className="relative z-10 grid h-fit max-h-[80vh] min-w-[330px] max-w-[min(90vw,600px)] flex-1 grid-cols-5 grid-rows-[auto_auto_1fr] lg:max-w-4xl lg:overflow-y-auto">
+      <div className="relative z-10 grid h-fit max-h-[80vh] min-w-[330px] max-w-[min(90vw,600px)] flex-1 grid-cols-5 grid-rows-[auto_auto_1fr] lg:max-w-3xl lg:overflow-y-auto 2xl:max-w-4xl">
         {/* Start & End Date (r1, c1) */}
         <div className="col-start-1 row-start-1 flex h-fit w-fit justify-end gap-2 justify-self-end overflow-x-visible pb-3 pr-2 pt-10">
           {/* Date Container */}

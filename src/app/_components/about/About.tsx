@@ -1,3 +1,4 @@
+import NavbarRegion from "@/app/_context/NavbarRegion";
 import AboutLinks from "@/components/about/AboutLinks";
 import { HeroSectionLink } from "@/types/types";
 import Image from "next/image";
@@ -12,7 +13,11 @@ const H = ({ children }: { children: string }): JSX.Element => (
 
 const About = ({ links }: AboutProps) => {
   return (
-    <section className="component-section flex h-fit w-full items-center justify-center overflow-x-hidden">
+    <section
+      className="component-section relative flex h-fit w-full items-center justify-center overflow-hidden"
+      id="about"
+    >
+      <NavbarRegion curSection={0} />
       {/* Content Container Mobile */}
       <div className="grid h-full w-full max-w-md grid-cols-[repeat(2,1fr)] flex-col items-center pt-10 lg:hidden">
         {/* White Panel (r1, c1) */}

@@ -8,6 +8,7 @@ import Link from "next/link";
 import { PortableText } from "@portabletext/react";
 import { projectComponents } from "@/components/projectlist/projectComponents";
 import ProjectAward from "@/components/projectlist/ProjectAward";
+import NavbarRegion from "@/app/_context/NavbarRegion";
 
 type ProjectsProps = {
   projects: Array<ProjectType>;
@@ -17,7 +18,11 @@ const Projects = ({ projects }: ProjectsProps) => {
   console.log(projects);
 
   return (
-    <section className="component-section flex h-fit w-full flex-col items-center overflow-x-hidden">
+    <section
+      className="component-section relative flex h-fit w-full flex-col items-center overflow-hidden"
+      id="projects"
+    >
+      <NavbarRegion curSection={2} />
       <h2 className="w-fit bg-gradient-to-r from-cpink to-cblue bg-clip-text py-2 text-[12vw] font-light lowercase leading-[12vw] tracking-wide text-transparent sm:text-7xl sm:leading-[5rem] lg:pb-10 lg:text-7xl 2xl:text-8xl">
         Projects
       </h2>
