@@ -63,6 +63,7 @@ const Projects = ({ projects }: ProjectsProps) => {
                     }
                     alt=""
                     fill
+                    sizes="1000px"
                     className="-z-20 rounded-lg object-cover"
                   />
                   <div className="absolute left-0 top-0 -z-10 h-full w-full rounded-lg bg-gradient-to-b from-[rgba(105,105,105,0)] to-[rgba(64,64,64,0.7)] lg:rounded-bl-lg" />

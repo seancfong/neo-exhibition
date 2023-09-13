@@ -30,9 +30,10 @@ const About = ({ links }: AboutProps) => {
         <div className="col-start-1 row-start-3 h-full w-full py-3 pl-[8vw] pr-1 sm:pl-5">
           <div className="relative h-full w-full justify-self-end rounded-lg pt-[100%] sm:h-0">
             <Image
-              src="/images/sean2021.webp"
+              src="/images/sean2023_2.webp"
               alt="image of Sean"
               fill
+              sizes="256px"
               className="rounded-lg object-cover"
             />
           </div>
@@ -71,10 +72,11 @@ const About = ({ links }: AboutProps) => {
           {/* Square container */}
           <div className="relative h-0 w-full p-5 pt-[100%]">
             <Image
-              src="/images/sean2021.webp"
+              src="/images/sean2023_2.webp"
               alt="image of Sean"
               fill
               className="rounded-lg object-cover"
+              sizes="512px"
             />
             {/* Decor container */}
             <Image

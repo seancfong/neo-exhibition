@@ -26,7 +26,7 @@ const ProjectAward = ({ description, organization }: AwardProps) => {
           className="hidden lg:block"
         />
       </div>
-      <div className="col-span-2 col-start-1 row-start-2 h-full rounded-md bg-gradient-to-r from-[rgba(193,147,197,0.40)] to-[rgba(123,198,204,0.40)]" />
+      <div className="col-span-2 col-start-1 row-start-2 h-full rounded-md bg-gradient-to-r from-[rgba(193,147,197,0.25)] to-[rgba(123,198,204,0.25)]" />
       <div className="relative col-start-2 row-start-2 flex flex-col justify-center sm:pr-10 lg:pb-1 lg:pt-2">
         <p className="text-sm font-normal uppercase tracking-wider sm:text-base lg:text-lg lg:font-light lg:leading-4">
           {organization}

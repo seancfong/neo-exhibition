@@ -36,8 +36,8 @@ const Navbar = (props: Props) => {
         <div className="pointer-events-auto flex rounded-lg bg-[rgba(99,99,99,0.5)] shadow-md backdrop-blur-sm">
           {/* Title and Name */}
           <div className="py-2 pl-8 pr-10 lowercase">
-            <h4 className="text-3xl leading-7 tracking-wide">The Showcase</h4>
-            <p className="font-light leading-5 tracking-wide text-[#ccc]">
+            <h4 className="text-2xl leading-6 tracking-wide">The Showcase</h4>
+            <p className="text-sm font-light leading-4 tracking-wide text-[#ccc]">
               by Sean Fong
             </p>
           </div>
@@ -48,7 +48,7 @@ const Navbar = (props: Props) => {
                 return (
                   <Link
                     key={`nav-section-${i}`}
-                    className="col-span-1 px-6 text-xl text-[#ccc]"
+                    className="col-span-1 px-6 text-lg text-[#ccc]"
                     href={`#${section.id}`}
                   >
                     {section.title}
