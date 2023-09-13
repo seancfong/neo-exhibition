@@ -4,6 +4,7 @@ import { ExperienceType } from "@/types/types";
 import { useRef } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import NavbarRegion from "@/app/_context/NavbarRegion";
+import { BsChevronDoubleDown } from "react-icons/bs";
 
 type ExperienceProps = {
   experiences: Array<ExperienceType>;
@@ -47,8 +48,11 @@ const Experience = ({ experiences }: ExperienceProps) => {
               <ExperienceCard experienceData={exp} />
             </div>
           ))}
-          <div>the end is here</div>
         </motion.div>
+        <div className="pointer-events-none -z-10 w-full text-center text-xs uppercase tracking-widest text-neutral-500 lg:text-sm">
+          <span className="relative -top-1">Keep scrolling down</span>
+          <BsChevronDoubleDown className="mx-auto animate-bounce" />
+        </div>
       </div>
     </section>
   );

@@ -53,7 +53,7 @@ export interface ExperienceType {
   endDate: string;
   featuredImage: SanitySourceImage;
   companyLogo: SanityImageSource;
-  bullets: Array<ExperienceBullet>;
+  bullets?: Array<ExperienceBullet>;
   skills: Array<SkillType>;
 }
 

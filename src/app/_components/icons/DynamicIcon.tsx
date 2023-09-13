@@ -4,6 +4,8 @@ import {
   BsNewspaper,
   BsUniversalAccessCircle,
   BsGlobe,
+  BsCodeSlash,
+  BsFillChatLeftTextFill,
 } from "react-icons/bs";
 import {
   SiContentful,
@@ -15,6 +17,7 @@ import {
   SiPlotly,
   SiThreedotjs,
   SiTypescript,
+  SiCplusplus,
 } from "react-icons/si";
 
 type IconProps = {
@@ -45,6 +48,10 @@ const DynamicIcon = ({
           return <BsUniversalAccessCircle className={className} />;
         case "BsGlobe":
           return <BsGlobe className={className} />;
+        case "BsCodeSlash":
+          return <BsCodeSlash className={className} />;
+        case "BsFillChatLeftTextFill":
+          return <BsFillChatLeftTextFill className={className} />;
       }
     }
     case "Si": {
@@ -67,6 +74,8 @@ const DynamicIcon = ({
           return <SiMongodb className={className} />;
         case "SiThreedotjs":
           return <SiThreedotjs className={className} />;
+        case "SiCplusplus":
+          return <SiCplusplus className={className} />;
       }
     }
   }
