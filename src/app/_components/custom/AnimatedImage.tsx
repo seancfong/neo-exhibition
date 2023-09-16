@@ -9,6 +9,7 @@ type AnimatedImageProps = {
   fill: boolean;
   sizes?: string;
   className: string;
+  useView?: boolean;
 };
 
 const AnimatedImage = ({
