@@ -30,6 +30,7 @@ const AnimatedImage = ({
       sizes={sizes}
       className={className}
       ref={ref}
+      objectFit="cover"
       style={{
         scale: isInView ? 1 : 1.08,
         transition: "all",

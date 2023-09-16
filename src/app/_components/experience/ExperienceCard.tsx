@@ -62,7 +62,7 @@ const ExperienceCard = ({ experienceData }: ExperienceCardType) => {
               src={urlFor(featuredImage)?.url() ?? "/images/bg-waves.webp"}
               alt=""
               fill
-              sizes="800px"
+              sizes="100vw"
               className="-z-20 rounded-br-none object-cover"
             />
             <div className="absolute left-0 top-0 -z-10 h-full w-full rounded-lg rounded-br-none bg-gradient-to-r from-[rgba(41,41,41,0.8)] to-[rgba(91,84,84,0.3)]" />
