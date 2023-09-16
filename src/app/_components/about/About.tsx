@@ -52,7 +52,7 @@ const About = ({ links }: AboutProps) => {
           />
         </div>
         {/* Paragraph Container (r4, c1) */}
-        <div className="relative col-span-2 col-start-1 row-start-4 w-full rounded-2xl bg-[#222222] bg-opacity-40 p-5 backdrop-blur-sm sm:px-10">
+        <div className="relative col-span-2 col-start-1 row-start-4 w-full rounded-2xl bg-[#222222] bg-opacity-40 p-5 sm:px-10">
           <p className="text-xl font-light leading-8 tracking-wide text-[#A0A0A0] sm:text-2xl sm:leading-9">
             <AboutText />
           </p>

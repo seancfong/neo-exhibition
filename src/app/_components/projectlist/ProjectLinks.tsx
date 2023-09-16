@@ -84,7 +84,7 @@ const LinkItem = ({ link, li, isSectionHovered }: LinkItemProps) => {
           setIsLinkHovered(false);
         }}
       >
-        {isLinkHovered ? (
+        {isSectionHovered && isLinkHovered ? (
           <HiArrowTopRightOnSquare className="text-3xl text-neutral-300 transition-colors duration-200 sm:text-4xl" />
         ) : (
           <DynamicIcon
@@ -101,10 +101,10 @@ const LinkItem = ({ link, li, isSectionHovered }: LinkItemProps) => {
         {isSectionHovered && (
           <motion.div
             className={cn(
-              "pointer-events-none absolute bottom-1 right-12 hidden h-3/4 rounded-md  pl-8 pr-4 backdrop-blur-sm lg:block",
+              "pointer-events-none absolute bottom-1 right-12 hidden h-3/4 rounded-md  pl-8 pr-4 lg:block",
               isLinkHovered
                 ? "bg-[rgba(123,198,204,0.30)]"
-                : "bg-[rgba(141,141,141,0.6)]",
+                : "bg-[rgba(111,111,111,0.8)]",
             )}
             variants={tooltipVariants}
             initial="hidden"

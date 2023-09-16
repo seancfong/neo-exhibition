@@ -63,7 +63,7 @@ const ExperienceCard = ({ experienceData }: ExperienceCardType) => {
               sizes="800px"
               className="-z-20 rounded-lg rounded-br-none object-cover"
             />
-            <div className="absolute left-0 top-0 -z-10 h-full w-full rounded-lg rounded-br-none bg-gradient-to-r from-[rgba(41,41,41,0.8)] to-[rgba(91,84,84,0.3)] backdrop-blur-[2px]" />
+            <div className="absolute left-0 top-0 -z-10 h-full w-full rounded-lg rounded-br-none bg-gradient-to-r from-[rgba(41,41,41,0.8)] to-[rgba(91,84,84,0.3)]" />
           </div>
           <h4 className="text-3xl font-light leading-8 tracking-wide sm:text-4xl lg:text-5xl 2xl:text-6xl">
             {position}
@@ -75,7 +75,7 @@ const ExperienceCard = ({ experienceData }: ExperienceCardType) => {
         {/* White panel (r2, c1) */}
         <div className="row-span-2 row-start-2 w-5 justify-self-end rounded-l-lg bg-panel-light lg:w-10" />
         {/* Bullets & Skills (r3, c2) */}
-        <div className="col-start-2 col-end-6 row-start-3 rounded-br-lg bg-panel-darkest p-5 pt-3 backdrop-blur-sm">
+        <div className="col-start-2 col-end-6 row-start-3 rounded-br-lg bg-panel-darkest p-5 pt-3">
           {/* Will keep bullets commented out for now */}
           {/* <ul className="list-inside font-extralight tracking-wider sm:text-lg lg:text-xl">
             {bullets?.map((bullet) => {
