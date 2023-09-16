@@ -10,6 +10,7 @@ import { projectComponents } from "@/components/projectlist/projectComponents";
 import ProjectAward from "@/components/projectlist/ProjectAward";
 import NavbarRegion from "@/app/_context/NavbarRegion";
 import ProjectLinks from "@/components/projectlist/ProjectLinks";
+import AnimatedLetters from "@/components/custom/AnimatedLetters";
 
 type ProjectsProps = {
   projects: Array<ProjectType>;
@@ -70,12 +71,20 @@ const Projects = ({ projects }: ProjectsProps) => {
                   <div className="absolute left-0 top-0 -z-10 h-full w-full rounded-lg bg-gradient-to-b from-[rgba(105,105,105,0)] to-[rgba(64,64,64,0.7)] lg:rounded-bl-lg" />
                 </div>
                 <div className="relative z-10 flex flex-col justify-end">
-                  <h4 className="hyphens-auto text-[10vw] font-light lowercase leading-[10vw] tracking-wider sm:pb-3 sm:text-5xl sm:leading-10 lg:pb-2 lg:text-6xl 2xl:text-7xl">
+                  <AnimatedLetters
+                    tag="h4"
+                    pb={4}
+                    className="hyphens-auto text-[10vw] font-light lowercase leading-[10vw] tracking-wider sm:text-5xl sm:leading-10 lg:text-6xl 2xl:text-7xl"
+                  >
                     {project?.title}
-                  </h4>
-                  <p className="text-sm font-light tracking-wide lg:text-lg lg:font-extralight 2xl:text-xl">
+                  </AnimatedLetters>
+                  <AnimatedLetters
+                    tag="p"
+                    stagger={0.01}
+                    className="text-sm font-light tracking-wide lg:text-lg lg:font-extralight 2xl:text-xl"
+                  >
                     {project?.subtitle}
-                  </p>
+                  </AnimatedLetters>
                 </div>
               </div>
               {/* Desktop Links Decoration (r3, c11) */}

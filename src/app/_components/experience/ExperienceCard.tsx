@@ -1,4 +1,5 @@
 "use client";
+import AnimatedLetters from "@/components/custom/AnimatedLetters";
 import { urlFor } from "@/lib/sanity/client";
 import { ExperienceType } from "@/types/types";
 import Image from "next/image";
@@ -65,31 +66,25 @@ const ExperienceCard = ({ experienceData }: ExperienceCardType) => {
             />
             <div className="absolute left-0 top-0 -z-10 h-full w-full rounded-lg rounded-br-none bg-gradient-to-r from-[rgba(41,41,41,0.8)] to-[rgba(91,84,84,0.3)]" />
           </div>
-          <h4 className="text-3xl font-light leading-8 tracking-wide sm:text-4xl lg:text-5xl 2xl:text-6xl">
+          <AnimatedLetters
+            tag="h4"
+            pb={4}
+            className="text-3xl font-light leading-8 tracking-wide sm:text-4xl lg:text-5xl 2xl:text-6xl"
+          >
             {position}
-          </h4>
-          <p className="text-sm font-light tracking-wide sm:text-base lg:text-2xl">
+          </AnimatedLetters>
+          <AnimatedLetters
+            tag="p"
+            stagger={0.02}
+            className="text-sm font-light tracking-wide sm:text-base lg:text-2xl"
+          >
             {subtitle}
-          </p>
+          </AnimatedLetters>
         </div>
         {/* White panel (r2, c1) */}
         <div className="row-span-2 row-start-2 w-5 justify-self-end rounded-l-lg bg-panel-light lg:w-10" />
         {/* Bullets & Skills (r3, c2) */}
         <div className="col-start-2 col-end-6 row-start-3 rounded-br-lg bg-panel-darkest p-5 pt-3">
-          {/* Will keep bullets commented out for now */}
-          {/* <ul className="list-inside font-extralight tracking-wider sm:text-lg lg:text-xl">
-            {bullets?.map((bullet) => {
-              const { _key, content } = bullet;
-              return (
-                <li
-                  key={_key}
-                  className="flex items-start pb-4 before:mr-3 before:mt-1.5 before:text-sm before:content-['•']"
-                >
-                  {content}
-                </li>
-              );
-            })}
-          </ul> */}
           <ul className="flex flex-wrap gap-x-3 gap-y-2 text-xs font-light uppercase tracking-widest text-dim sm:text-sm lg:text-base 2xl:text-lg">
             {skills?.map((skill, i) => {
               const { _id, name } = skill;
