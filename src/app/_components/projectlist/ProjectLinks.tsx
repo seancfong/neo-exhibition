@@ -114,7 +114,7 @@ const LinkItem = ({
             className={cn(
               "pointer-events-none absolute bottom-1 right-12 hidden h-3/4 rounded-md  pl-8 pr-4 lg:block",
               nthLinkHovered === li
-                ? "bg-[rgba(123,198,204,0.30)]"
+                ? "bg-gradient-to-r from-cta-left to-cta-right"
                 : "bg-[rgba(111,111,111,0.8)]",
             )}
             variants={tooltipVariants}

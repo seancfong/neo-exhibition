@@ -1,0 +1,42 @@
+"use client";
+import React, { useRef } from "react";
+import Image from "next/image";
+import { useInView } from "framer-motion";
+
+type AnimatedImageProps = {
+  src: string;
+  alt: string;
+  fill: boolean;
+  sizes?: string;
+  className: string;
+};
+
+const AnimatedImage = ({
+  src,
+  alt,
+  fill,
+  sizes,
+  className,
+}: AnimatedImageProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: "some" });
+
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      fill={fill}
+      sizes={sizes}
+      className={className}
+      ref={ref}
+      style={{
+        scale: isInView ? 1 : 1.1,
+        transition: "all",
+        transitionDuration: "1500ms",
+        transitionTimingFunction: "cubic-bezier(0.65, 0, 0.35, 1)",
+      }}
+    />
+  );
+};
+
+export default AnimatedImage;

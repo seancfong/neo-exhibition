@@ -11,6 +11,7 @@ import ProjectAward from "@/components/projectlist/ProjectAward";
 import NavbarRegion from "@/app/_context/NavbarRegion";
 import ProjectLinks from "@/components/projectlist/ProjectLinks";
 import AnimatedLetters from "@/components/custom/AnimatedLetters";
+import AnimatedImage from "@/components/custom/AnimatedImage";
 
 type ProjectsProps = {
   projects: Array<ProjectType>;
@@ -57,8 +58,8 @@ const Projects = ({ projects }: ProjectsProps) => {
               </div>
               {/* Image and Title  (r2, c1)*/}
               <div className="relative col-span-7 row-start-2 h-full w-full rounded-lg rounded-bl-none bg-panel-light p-5 pt-32 text-light sm:px-8 lg:col-span-10 lg:col-start-2 lg:bg-panel-darkest lg:px-10 lg:pt-44">
-                <div className="absolute left-0 top-0 z-0 h-full w-full">
-                  <Image
+                <div className="absolute left-0 top-0 z-0 h-full w-full overflow-hidden rounded-lg">
+                  <AnimatedImage
                     src={
                       urlFor(project?.featuredImage)?.url() ??
                       "/images/bg-waves.webp"
@@ -66,9 +67,9 @@ const Projects = ({ projects }: ProjectsProps) => {
                     alt=""
                     fill
                     sizes="1000px"
-                    className="-z-20 rounded-lg object-cover"
+                    className="-z-20 object-cover"
                   />
-                  <div className="absolute left-0 top-0 -z-10 h-full w-full rounded-lg bg-gradient-to-b from-[rgba(105,105,105,0)] to-[rgba(64,64,64,0.7)] lg:rounded-bl-lg" />
+                  <div className="absolute left-0 top-0 -z-10 h-full w-full bg-gradient-to-b from-[rgba(105,105,105,0)] to-[rgba(64,64,64,0.7)] lg:rounded-bl-lg" />
                 </div>
                 <div className="relative z-10 flex flex-col justify-end">
                   <AnimatedLetters
