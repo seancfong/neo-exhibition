@@ -75,6 +75,7 @@ export interface ProjectType {
 export type ProjectLink = {
   linkURL: string;
   reactIcon: SanityReactIcon;
+  linkTooltip: string;
 };
 
 type ProjectAward = {

@@ -9,6 +9,7 @@ import { PortableText } from "@portabletext/react";
 import { projectComponents } from "@/components/projectlist/projectComponents";
 import ProjectAward from "@/components/projectlist/ProjectAward";
 import NavbarRegion from "@/app/_context/NavbarRegion";
+import ProjectLinks from "@/components/projectlist/ProjectLinks";
 
 type ProjectsProps = {
   projects: Array<ProjectType>;
@@ -80,25 +81,7 @@ const Projects = ({ projects }: ProjectsProps) => {
               {/* Desktop Links Decoration (r3, c11) */}
               <div className="col-start-11 row-start-2 hidden h-10 self-end bg-panel-light lg:block" />
               {/* Links (r3, c1) */}
-              <div className="col-span-1 row-start-3 flex flex-col items-center gap-5 rounded-bl-lg bg-panel-light px-2 pb-5 pt-10 lg:col-start-11 lg:gap-6 lg:rounded-bl-none lg:rounded-br-lg">
-                {project?.links?.map((link, li) => {
-                  const { linkURL, reactIcon } = link;
-                  return (
-                    <Link
-                      href={linkURL}
-                      key={linkURL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <DynamicIcon
-                        icon={reactIcon?.name}
-                        library={reactIcon?.library}
-                        className="text-3xl text-[#9E9E9E] sm:text-4xl"
-                      />
-                    </Link>
-                  );
-                })}
-              </div>
+              <ProjectLinks links={project?.links} />
               {/* Description (r3, c2) */}
               <div className="col-span-6 col-start-2 row-start-3 flex flex-col gap-3 rounded-r-lg bg-panel-darkest pb-8 pt-6 text-light lg:col-span-9">
                 {project?.award && (
