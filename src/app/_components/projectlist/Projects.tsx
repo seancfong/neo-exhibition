@@ -58,7 +58,7 @@ const Projects = ({ projects }: ProjectsProps) => {
                 </span>
               </div>
               {/* Image and Title  (r2, c1)*/}
-              <div className="relative col-span-7 row-start-2 aspect-video h-full w-full overflow-hidden rounded-lg rounded-bl-none bg-panel-light text-light sm:px-8 lg:col-span-10 lg:col-start-2 lg:bg-panel-darkest lg:px-10 lg:pt-44">
+              <div className="relative col-span-7 row-start-2 flex aspect-video h-full w-full flex-col justify-end overflow-hidden rounded-lg rounded-bl-none bg-panel-light px-5 text-light sm:px-8 lg:col-span-10 lg:col-start-2 lg:bg-panel-darkest lg:px-10 lg:pt-44">
                 <div className="absolute left-0 top-0 z-0 h-full w-full overflow-hidden rounded-lg">
                   <AnimatedImage
                     src={
@@ -83,7 +83,7 @@ const Projects = ({ projects }: ProjectsProps) => {
                   <AnimatedLetters
                     tag="p"
                     stagger={0.01}
-                    className="text-sm font-light tracking-wide lg:text-lg lg:font-extralight 2xl:text-xl"
+                    className="pb-3 text-sm font-light tracking-wide lg:pb-5 lg:text-lg lg:font-extralight xl:pb-8 2xl:text-xl"
                   >
                     {project?.subtitle}
                   </AnimatedLetters>
