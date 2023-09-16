@@ -12,6 +12,7 @@ import NavbarRegion from "@/app/_context/NavbarRegion";
 import ProjectLinks from "@/components/projectlist/ProjectLinks";
 import AnimatedLetters from "@/components/custom/AnimatedLetters";
 import AnimatedImage from "@/components/custom/AnimatedImage";
+import AnimatedBar from "@/components/custom/AnimatedBar";
 
 type ProjectsProps = {
   projects: Array<ProjectType>;
@@ -44,7 +45,7 @@ const Projects = ({ projects }: ProjectsProps) => {
                 <span className="whitespace-nowrap text-dim">
                   {project?.date}
                 </span>
-                <div className="h-0.5 w-full flex-grow rounded-full bg-cyellow opacity-50" />
+                <AnimatedBar />
               </div>
               {/* Count (r1, c5) */}
               <div className="col-start-7 row-start-1 self-center justify-self-center font-light text-[rgba(226,226,226,0.3)] lg:col-start-11 lg:px-4 lg:pb-1">

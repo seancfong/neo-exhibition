@@ -77,8 +77,8 @@ type AnimatedLettersContentProps = {
 
 const AnimatedLettersContent = ({ text, pb }: AnimatedLettersContentProps) => {
   const words: Array<string> = [];
-  text.split(" ").forEach((word) => {
-    words.push(`${word} `);
+  text.split(" ").forEach((word, ind) => {
+    words.push(`${word}${ind === text.split(" ").length - 1 ? "" : " "}`);
   });
 
   return (
