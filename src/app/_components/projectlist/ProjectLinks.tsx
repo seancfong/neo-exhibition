@@ -27,6 +27,7 @@ const tooltipVariants: Variants = {
 
 const ProjectLinks = ({ links }: Props) => {
   const [isSectionHovered, setIsSectionHovered] = useState<boolean>(false);
+  const [nthLinkHovered, setNthLinkHovered] = useState<number>(-1);
 
   return (
     <div
@@ -36,6 +37,7 @@ const ProjectLinks = ({ links }: Props) => {
       }}
       onMouseLeave={() => {
         setIsSectionHovered(false);
+        setNthLinkHovered(-1);
       }}
     >
       <AnimatePresence>
@@ -54,6 +56,8 @@ const ProjectLinks = ({ links }: Props) => {
           li={li}
           key={link?.linkURL}
           isSectionHovered={isSectionHovered}
+          nthLinkHovered={nthLinkHovered}
+          setNthLinkHovered={setNthLinkHovered}
         />
       ))}
     </div>
@@ -64,11 +68,18 @@ type LinkItemProps = {
   li: number;
   link: ProjectLink;
   isSectionHovered: boolean;
+  nthLinkHovered: number;
+  setNthLinkHovered: React.Dispatch<React.SetStateAction<number>>;
 };
 
-const LinkItem = ({ link, li, isSectionHovered }: LinkItemProps) => {
+const LinkItem = ({
+  link,
+  li,
+  isSectionHovered,
+  nthLinkHovered,
+  setNthLinkHovered,
+}: LinkItemProps) => {
   const { linkURL, reactIcon, linkTooltip } = link;
-  const [isLinkHovered, setIsLinkHovered] = useState<boolean>(false);
 
   return (
     <span className="relative">
@@ -78,13 +89,13 @@ const LinkItem = ({ link, li, isSectionHovered }: LinkItemProps) => {
         rel="noopener noreferrer"
         className="relative z-10"
         onMouseEnter={() => {
-          setIsLinkHovered(true);
+          setNthLinkHovered(li);
         }}
         onMouseLeave={() => {
-          setIsLinkHovered(false);
+          setNthLinkHovered(-1);
         }}
       >
-        {isSectionHovered && isLinkHovered ? (
+        {nthLinkHovered === li ? (
           <HiArrowTopRightOnSquare className="text-3xl text-neutral-300 transition-colors duration-200 sm:text-4xl" />
         ) : (
           <DynamicIcon
@@ -102,7 +113,7 @@ const LinkItem = ({ link, li, isSectionHovered }: LinkItemProps) => {
           <motion.div
             className={cn(
               "pointer-events-none absolute bottom-1 right-12 hidden h-3/4 rounded-md  pl-8 pr-4 lg:block",
-              isLinkHovered
+              nthLinkHovered === li
                 ? "bg-[rgba(123,198,204,0.30)]"
                 : "bg-[rgba(111,111,111,0.8)]",
             )}
