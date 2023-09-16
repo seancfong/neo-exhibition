@@ -44,7 +44,7 @@ const ProjectLinks = ({ links }: Props) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="pointer-events-none absolute right-full top-0 h-full w-80 bg-gradient-to-r from-transparent to-[rgba(20,20,20,0.5)]"
+            className="pointer-events-none absolute right-full top-0 hidden h-full w-80 bg-gradient-to-r from-transparent to-[rgba(20,20,20,0.5)] lg:block"
           />
         )}
       </AnimatePresence>
