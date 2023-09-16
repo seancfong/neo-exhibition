@@ -32,7 +32,7 @@ const Navbar = (props: Props) => {
   return (
     <>
       {/* Desktop Navbar */}
-      <div className="pointer-events-none fixed bottom-6 z-50 hidden w-full items-center justify-center text-light lg:flex">
+      <div className="pointer-events-none sticky bottom-6 z-50 hidden w-full items-center justify-center text-light lg:flex">
         <div className="pointer-events-auto flex rounded-lg bg-[rgba(99,99,99,0.5)] shadow-md backdrop-blur-sm">
           {/* Title and Name */}
           <div className="py-2 pl-8 pr-10 lowercase">

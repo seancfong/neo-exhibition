@@ -18,6 +18,7 @@ import {
   SiThreedotjs,
   SiTypescript,
   SiCplusplus,
+  SiSupabase,
 } from "react-icons/si";
 
 type IconProps = {
@@ -76,6 +77,8 @@ const DynamicIcon = ({
           return <SiThreedotjs className={className} />;
         case "SiCplusplus":
           return <SiCplusplus className={className} />;
+        case "SiSupabase":
+          return <SiSupabase className={className} />;
       }
     }
   }

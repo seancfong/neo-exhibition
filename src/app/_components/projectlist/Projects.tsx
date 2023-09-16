@@ -19,14 +19,14 @@ const Projects = ({ projects }: ProjectsProps) => {
 
   return (
     <section
-      className="component-section relative flex h-fit w-full flex-col items-center overflow-hidden"
+      className="component-section relative flex h-fit w-full flex-col items-center overflow-hidden pb-32"
       id="projects"
     >
       <NavbarRegion curSection={2} />
       <h2 className="w-fit bg-gradient-to-r from-cpink to-cblue bg-clip-text py-2 text-[12vw] font-light lowercase leading-[12vw] tracking-wide text-transparent sm:text-7xl sm:leading-[5rem] lg:pb-10 lg:text-7xl 2xl:text-8xl">
         Projects
       </h2>
-      {/* Mobile Projects List */}
+      {/* Projects List */}
       <div className="flex flex-col gap-20">
         {projects.map((project, i) => {
           return (
@@ -80,11 +80,16 @@ const Projects = ({ projects }: ProjectsProps) => {
               {/* Desktop Links Decoration (r3, c11) */}
               <div className="col-start-11 row-start-2 hidden h-10 self-end bg-panel-light lg:block" />
               {/* Links (r3, c1) */}
-              <div className="col-span-1 row-start-3 flex flex-col items-center gap-5 rounded-bl-lg bg-panel-light px-2 pt-10 lg:col-start-11 lg:gap-6 lg:rounded-bl-none lg:rounded-br-lg">
+              <div className="col-span-1 row-start-3 flex flex-col items-center gap-5 rounded-bl-lg bg-panel-light px-2 pb-5 pt-10 lg:col-start-11 lg:gap-6 lg:rounded-bl-none lg:rounded-br-lg">
                 {project?.links?.map((link, li) => {
                   const { linkURL, reactIcon } = link;
                   return (
-                    <Link href={linkURL} key={linkURL}>
+                    <Link
+                      href={linkURL}
+                      key={linkURL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <DynamicIcon
                         icon={reactIcon?.name}
                         library={reactIcon?.library}
