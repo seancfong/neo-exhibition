@@ -19,7 +19,7 @@ type ProjectsProps = {
 };
 
 const Projects = ({ projects }: ProjectsProps) => {
-  console.log(projects);
+  // console.log(projects);
 
   return (
     <section

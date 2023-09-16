@@ -43,7 +43,7 @@ async function fetchCMSData() {
 export default async function Home() {
   const sanityData: sanityResponseType = await fetchCMSData();
 
-  console.log(sanityData);
+  // console.log(sanityData);
   const { heroLinks, experiences, projects } = sanityData;
 
   return (
