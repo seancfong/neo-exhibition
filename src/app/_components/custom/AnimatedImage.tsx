@@ -19,7 +19,7 @@ const AnimatedImage = ({
   className,
 }: AnimatedImageProps) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: "some" });
+  const isInView = useInView(ref, { once: true, amount: 0.8 });
 
   return (
     <Image
@@ -30,9 +30,9 @@ const AnimatedImage = ({
       className={className}
       ref={ref}
       style={{
-        scale: isInView ? 1 : 1.1,
+        scale: isInView ? 1 : 1.08,
         transition: "all",
-        transitionDuration: "1500ms",
+        transitionDuration: "1800ms",
         transitionTimingFunction: "cubic-bezier(0.65, 0, 0.35, 1)",
       }}
     />
