@@ -88,10 +88,7 @@ const Navbar = (props: Props) => {
                     className="relative col-span-1 grid h-fit place-items-center px-6"
                   >
                     {i === maxIndex && (
-                      <motion.div
-                        className="pointer-events-none absolute -z-10 h-9 w-full rounded-md border-2 border-[rgba(173,173,173,0.05)] bg-neutral-600 bg-opacity-80"
-                        layoutId="navbar-tab"
-                      />
+                      <div className="pointer-events-none absolute -z-10 h-9 w-full rounded-md border-2 border-[rgba(173,173,173,0.05)] bg-neutral-500 bg-opacity-80" />
                     )}
                     <Link
                       className={cn(
