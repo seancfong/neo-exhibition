@@ -58,7 +58,7 @@ const Projects = ({ projects }: ProjectsProps) => {
                 </span>
               </div>
               {/* Image and Title  (r2, c1)*/}
-              <div className="relative col-span-7 row-start-2 flex aspect-video h-full w-full flex-col justify-end overflow-hidden rounded-lg rounded-bl-none bg-panel-light px-5 text-light sm:px-8 lg:col-span-10 lg:col-start-2 lg:bg-panel-darkest lg:px-10 lg:pt-44">
+              <div className="relative col-span-7 row-start-2 flex aspect-video h-full w-full flex-col justify-end overflow-hidden rounded-lg rounded-bl-none bg-panel-light px-5 text-light sm:aspect-[21/9] sm:px-8 lg:col-span-10 lg:col-start-2 lg:bg-panel-darkest lg:px-10 lg:pt-44">
                 <div className="absolute left-0 top-0 z-0 h-full w-full overflow-hidden rounded-lg">
                   <AnimatedImage
                     src={
@@ -75,15 +75,15 @@ const Projects = ({ projects }: ProjectsProps) => {
                 <div className="relative z-10 flex flex-col justify-end">
                   <AnimatedLetters
                     tag="h4"
-                    pb={4}
-                    className="hyphens-auto text-[10vw] font-light lowercase leading-[10vw] tracking-wider sm:text-5xl sm:leading-10 lg:text-6xl 2xl:text-7xl"
+                    pb={10}
+                    className="hyphens-auto text-[10vw] font-light lowercase leading-[8vw] tracking-wider sm:pb-2 sm:text-5xl sm:leading-9 lg:text-6xl lg:leading-[3.25rem] 2xl:text-7xl 2xl:leading-[3.5rem]"
                   >
                     {project?.title}
                   </AnimatedLetters>
                   <AnimatedLetters
                     tag="p"
                     stagger={0.01}
-                    className="pb-3 text-sm font-light tracking-wide lg:pb-5 lg:text-lg lg:font-extralight xl:pb-8 2xl:text-xl"
+                    className="pb-3 text-sm font-light leading-4 tracking-wide sm:pb-5 lg:text-lg lg:font-extralight 2xl:text-xl"
                   >
                     {project?.subtitle}
                   </AnimatedLetters>

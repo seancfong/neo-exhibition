@@ -31,7 +31,7 @@ const ProjectLinks = ({ links }: Props) => {
 
   return (
     <div
-      className="relative col-span-1 row-start-3 flex flex-col items-center gap-5 rounded-bl-lg bg-panel-light px-2 pb-5 pt-10 lg:col-start-11 lg:gap-6 lg:rounded-bl-none lg:rounded-br-lg"
+      className="relative col-span-1 row-start-3 flex flex-col items-center gap-6 rounded-bl-lg bg-panel-light px-3 pb-5 pt-10 lg:col-start-11 lg:gap-7 lg:rounded-bl-none lg:rounded-br-lg"
       onMouseEnter={() => {
         setIsSectionHovered(true);
       }}
@@ -102,7 +102,7 @@ const LinkItem = ({
             icon={reactIcon?.name}
             library={reactIcon?.library}
             className={cn(
-              "text-3xl transition-colors duration-200 sm:text-4xl",
+              "text-4xl transition-colors duration-200",
               isSectionHovered ? "text-neutral-300" : "text-neutral-400",
             )}
           />
