@@ -1,22 +1,13 @@
 "use client";
-import { useNavbarContext } from "@/app/_context/NavbarContext";
+import { useNavbarContext } from "@/context/NavbarContext";
 import React, { useEffect, useState } from "react";
 
-type Props = {};
+type Props = {
+  maxIndex: number;
+};
 
-const NavProgressbar = (props: Props) => {
+const NavProgressbar = ({ maxIndex }: Props) => {
   const { sectionArray } = useNavbarContext();
-  const [maxIndex, setMaxIndex] = useState<number>(0);
-
-  useEffect(() => {
-    let ind = 0;
-    sectionArray.forEach((arrayBoolean, i) => {
-      if (arrayBoolean) {
-        ind = i;
-      }
-    });
-    setMaxIndex(ind);
-  }, [sectionArray]);
 
   return (
     <div
