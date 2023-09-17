@@ -237,10 +237,10 @@ const About = ({ links }: AboutProps) => {
 const AboutText = () => {
   return (
     <>
-      I am a third-year student at <H>UC Irvine</H> majoring in{" "}
-      <H>Computer Science</H> with a minor in <H>Informatics</H>. I enjoy
-      creating innovative and practical <H>applications</H> people can{" "}
-      <H>interact</H> with, and I sometimes write about them too!
+      I am a developer and student at <H>UC Irvine</H> majoring in{" "}
+      <H>Computer Science</H>. I create innovative and robust{" "}
+      <H>applications</H> people can <H>interact</H> with, and I strive to pay
+      attention to that extra <H>personal touch</H> in my work!
     </>
   );
 };
