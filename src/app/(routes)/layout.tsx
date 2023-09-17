@@ -12,6 +12,18 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Sean Fong | The Showcase",
   description: "Developer portfolio site, constructed by Sean Fong.",
+  openGraph: {
+    type: "website",
+    url: "https://seancfong.com",
+    title: "Sean Fong | The Showcase",
+    description: "Developer portfolio site, constructed by Sean Fong.",
+    siteName: "Sean Fong | The Showcase",
+    images: [
+      {
+        url: "https://seancfong.com/images/og.jpg",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
