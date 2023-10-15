@@ -86,6 +86,7 @@ const AnimatedLettersContent = ({ text, pb }: AnimatedLettersContentProps) => {
       {words.map((word, wi) => {
         return (
           <span
+            aria-hidden
             key={wi}
             className="inline-block overflow-hidden whitespace-nowrap"
             style={{ paddingBottom: `${pb ?? 0}px` }}

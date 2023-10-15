@@ -1,3 +1,4 @@
+import AnimatedContent from "@/components/custom/AnimatedContent";
 import Image from "next/image";
 import React from "react";
 
@@ -8,7 +9,7 @@ type AwardProps = {
 
 const ProjectAward = ({ description, organization }: AwardProps) => {
   return (
-    <div className="relative grid max-w-xs grid-cols-[auto_1fr] justify-start px-2 sm:w-fit sm:min-w-[350px] sm:max-w-none sm:px-5 lg:px-10">
+    <AnimatedContent className="relative grid max-w-xs grid-cols-[auto_1fr] justify-start px-2 sm:w-fit sm:min-w-[350px] sm:max-w-none sm:px-5 lg:px-10">
       {/* Content */}
       <div className="relative col-start-1 row-span-3 row-start-1 ml-2 mr-2 self-center sm:ml-6 sm:mr-4">
         <Image
@@ -38,7 +39,7 @@ const ProjectAward = ({ description, organization }: AwardProps) => {
       {/* Gutters */}
       <div className="col-span-2 row-start-1 h-2" />
       <div className="col-span-2 row-start-3 h-2" />
-    </div>
+    </AnimatedContent>
   );
 };
 

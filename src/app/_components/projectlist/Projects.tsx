@@ -13,6 +13,7 @@ import ProjectLinks from "@/components/projectlist/ProjectLinks";
 import AnimatedLetters from "@/components/custom/AnimatedLetters";
 import AnimatedImage from "@/components/custom/AnimatedImage";
 import AnimatedBar from "@/components/custom/AnimatedBar";
+import AnimatedContent from "@/components/custom/AnimatedContent";
 
 type ProjectsProps = {
   projects: Array<ProjectType>;
@@ -102,23 +103,27 @@ const Projects = ({ projects }: ProjectsProps) => {
                   />
                 )}
                 <div className="px-3 font-extralight leading-6 tracking-wider sm:px-5 lg:px-10 lg:text-xl lg:leading-8 2xl:text-2xl 2xl:leading-9">
-                  <PortableText
-                    value={project?.description}
-                    components={projectComponents}
-                  />
+                  <AnimatedContent>
+                    <PortableText
+                      value={project?.description}
+                      components={projectComponents}
+                    />
+                  </AnimatedContent>
                 </div>
                 <ul className="flex flex-wrap gap-x-3 gap-y-2 px-3 text-xs font-light uppercase tracking-widest text-dim sm:px-5 sm:text-sm lg:pl-10 lg:text-base">
                   {project?.techStack?.map((skill, i) => {
                     const { _id, name } = skill;
                     return (
-                      <li key={_id}>
-                        <span>{name}</span>
-                        <span aria-hidden={true} className="pl-3">
-                          {i !== project?.techStack?.length - 1 && (
-                            <span>&#8226;</span>
-                          )}
-                        </span>
-                      </li>
+                      <AnimatedContent key={_id} delay={i * 0.05}>
+                        <li>
+                          <span>{name}</span>
+                          <span aria-hidden={true} className="pl-3">
+                            {i !== project?.techStack?.length - 1 && (
+                              <span>&#8226;</span>
+                            )}
+                          </span>
+                        </li>
+                      </AnimatedContent>
                     );
                   })}
                 </ul>
