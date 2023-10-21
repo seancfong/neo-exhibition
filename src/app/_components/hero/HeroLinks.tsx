@@ -27,11 +27,8 @@ const HeroLinks = ({ links }: HeroLinkProps) => {
       {/* Desktop Links */}
       <ul className="hidden gap-2 rounded-lg bg-[#222222] bg-opacity-20 lg:flex">
         {links.map((link: HeroSectionLink, i) => (
-          <>
-            <li
-              key={link?.key ?? i}
-              className="w-fit font-light lowercase tracking-wider text-light"
-            >
+          <React.Fragment key={link?.key}>
+            <li className="w-fit font-light lowercase tracking-wider text-light">
               <Link
                 href={link?.linkURL}
                 target="_blank"
@@ -41,14 +38,10 @@ const HeroLinks = ({ links }: HeroLinkProps) => {
                 {link?.name}
               </Link>
             </li>
-            <li
-              key={`bullet-${i}`}
-              aria-hidden={true}
-              className="self-center text-gray-300"
-            >
+            <li aria-hidden={true} className="self-center text-gray-300">
               {i !== links.length - 1 && <span>&#8226;</span>}
             </li>
-          </>
+          </React.Fragment>
         ))}
       </ul>
     </>

@@ -10,6 +10,7 @@ type AnimatedImageProps = {
   sizes?: string;
   className: string;
   useView?: boolean;
+  priority?: boolean;
 };
 
 const AnimatedImage = ({
@@ -18,6 +19,7 @@ const AnimatedImage = ({
   fill,
   sizes,
   className,
+  priority = false,
 }: AnimatedImageProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.8 });
@@ -29,6 +31,7 @@ const AnimatedImage = ({
       fill={fill}
       sizes={sizes}
       className={className}
+      priority={priority}
       ref={ref}
       objectFit="cover"
       style={{
