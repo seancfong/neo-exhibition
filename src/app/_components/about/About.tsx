@@ -43,9 +43,9 @@ const About = ({ links }: AboutProps) => {
             type: "spring",
             duration: 1,
           }}
-          className="relative z-10 col-span-2 col-start-1 row-start-2 justify-self-end pr-[8vw] text-2xl font-light leading-8 tracking-wide text-dim sm:pr-5 sm:text-3xl"
+          className="relative z-10 col-span-2 col-start-1 row-start-2 justify-self-end bg-gradient-to-r from-cpinklight to-cbluelight bg-clip-text pr-[8vw] text-2xl font-light leading-8 tracking-wide text-transparent sm:pr-5 sm:text-3xl"
         >
-          hello, my name is
+          Hello, my name is
         </motion.h2>
         {/* Image (r3, c1) */}
         <div className="col-start-1 row-start-3 h-full w-full py-3 pl-[8vw] pr-1 sm:pl-5">
@@ -78,7 +78,7 @@ const About = ({ links }: AboutProps) => {
               duration: 1,
               delay: 0.1,
             }}
-            className="bg-gradient-to-r from-cpink to-cblue bg-clip-text pb-5 text-right text-[12vw] font-light lowercase leading-[12vw] tracking-wide text-transparent sm:text-7xl sm:leading-[5rem]"
+            className="bg-clip-text pb-5 text-right text-[12vw] font-light leading-[12vw] tracking-wide text-light sm:text-7xl sm:leading-[5rem]"
           >
             Sean Fong
           </motion.h1>
@@ -182,7 +182,7 @@ const About = ({ links }: AboutProps) => {
               type: "spring",
               duration: 1,
             }}
-            className="text-2xl font-light lowercase leading-10 tracking-wide text-dim 2xl:text-3xl"
+            className="w-fit bg-gradient-to-r from-cpinklight to-cbluelight bg-clip-text font-museo text-2xl font-light leading-10 tracking-wide text-transparent 2xl:text-3xl"
           >
             Hello, my name is
           </motion.h2>
@@ -194,7 +194,7 @@ const About = ({ links }: AboutProps) => {
               duration: 1,
               delay: 0.1,
             }}
-            className="bg-gradient-to-r from-cpink to-cblue bg-clip-text pb-4 text-8xl font-light lowercase tracking-wide text-transparent"
+            className="pb-4 text-8xl font-light tracking-wide text-light"
           >
             Sean Fong
           </motion.h1>

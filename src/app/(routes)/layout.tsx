@@ -1,11 +1,17 @@
 import { NavbarContextProvider } from "@/app/_context/NavbarContext";
 import "@/app/styles/globals.css";
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Outfit, MuseoModerno } from "next/font/google";
 
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
+  display: "block",
+});
+
+const museoModerno = MuseoModerno({
+  subsets: ["latin"],
+  variable: "--font-museo-moderno",
   display: "block",
 });
 
@@ -46,7 +52,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <NavbarContextProvider>
-        <body className={`${outfit.variable} font-sans`}>{children}</body>
+        <body
+          className={`${outfit.variable} ${museoModerno.variable} font-sans`}
+        >
+          {children}
+        </body>
       </NavbarContextProvider>
     </html>
   );

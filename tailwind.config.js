@@ -13,6 +13,8 @@ module.exports = {
         dim: "#a0a0a0",
         cpink: "#be93c5",
         cblue: "#7bb4cc",
+        cpinklight: "#ceb9de",
+        cbluelight: "#a2bcda",
         cyellow: "#ffc700",
         "cta-left": "rgba(132,148,166,0.60)",
         "cta-right": "rgba(101,109,169,0.60)",
@@ -26,6 +28,7 @@ module.exports = {
       },
       fontFamily: {
         outfit: ["var(--font-outfit)"],
+        museo: ["var(--font-museo-moderno)"],
       },
     },
   },
