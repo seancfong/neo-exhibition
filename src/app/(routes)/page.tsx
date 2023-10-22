@@ -55,6 +55,7 @@ export default async function Home() {
           alt=""
           fill
           className="object-cover opacity-[15%]"
+          priority
         />
       </div>
 

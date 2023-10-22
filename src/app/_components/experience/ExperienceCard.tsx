@@ -21,7 +21,7 @@ const ExperienceCard = ({ experienceData }: ExperienceCardType) => {
   } = experienceData;
 
   return (
-    <div className="relative z-10 grid h-fit max-h-[80vh] min-w-[330px] max-w-[min(90vw,600px)] flex-1 grid-cols-5 grid-rows-[auto_auto_1fr] lg:max-w-3xl lg:overflow-y-auto 2xl:max-w-4xl">
+    <div className="relative z-10 grid h-fit max-h-[80vh] min-w-[330px] max-w-[min(90vw,600px)] flex-1 grid-cols-5 grid-rows-[auto_auto_1fr] pb-1 lg:max-w-3xl lg:overflow-y-auto 2xl:max-w-4xl">
       {/* Start & End Date (r1, c1) */}
       <div className="col-start-1 row-start-1 flex h-fit w-fit justify-end gap-2 justify-self-end overflow-x-visible pb-3 pr-2 pt-10">
         <AnimatedExperienceBar startDate={startDate} endDate={endDate} />
@@ -48,7 +48,7 @@ const ExperienceCard = ({ experienceData }: ExperienceCardType) => {
           />
         </div>
         {/* Background */}
-        <div className="absolute left-0 top-0 -z-10 h-full w-full overflow-hidden rounded-lg">
+        <div className="absolute left-0 top-0 -z-10 h-full w-full overflow-hidden rounded-lg rounded-br-sm">
           <AnimatedImage
             src={urlFor(featuredImage)?.url() ?? "/images/bg-waves.webp"}
             alt=""
@@ -75,9 +75,9 @@ const ExperienceCard = ({ experienceData }: ExperienceCardType) => {
         </AnimatedLetters>
       </div>
       {/* White panel (r2, c1) */}
-      <div className="row-span-2 row-start-2 w-5 justify-self-end rounded-l-lg bg-panel-light lg:w-10" />
+      <div className="row-span-2 row-start-2 w-5 justify-self-end rounded-l-lg border-2 border-r-0 border-neutral-500 border-opacity-10 bg-panel-light shadow-panel lg:w-10" />
       {/* Bullets & Skills (r3, c2) */}
-      <div className="col-start-2 col-end-6 row-start-3 rounded-br-lg bg-panel-darkest p-5 pt-3">
+      <div className="col-start-2 col-end-6 row-start-3 rounded-br-lg border-b-2 border-neutral-500 border-opacity-10 bg-panel-darkest p-5 pt-3 shadow-panel">
         <ul className="flex flex-wrap gap-x-3 gap-y-2 text-xs font-light uppercase tracking-widest text-dim sm:text-sm lg:text-base 2xl:text-lg">
           {skills?.map((skill, i) => {
             const { _id, name } = skill;

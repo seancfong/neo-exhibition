@@ -31,7 +31,7 @@ const ProjectLinks = ({ links }: Props) => {
 
   return (
     <div
-      className="relative col-span-1 row-start-3 flex flex-col items-center gap-6 rounded-bl-lg bg-panel-light px-3 pb-5 pt-10 lg:col-start-11 lg:gap-7 lg:rounded-bl-none lg:rounded-br-lg"
+      className="relative col-span-1 col-start-1 row-start-3 flex flex-col items-center gap-6 rounded-bl-lg border-2 border-r-0 border-t-0 border-neutral-500 border-opacity-10 bg-panel-light px-3 pb-5 pt-10 shadow-panel lg:col-start-11 lg:gap-7 lg:rounded-bl-none lg:rounded-br-lg lg:border-l-0 lg:border-r-2"
       onMouseEnter={() => {
         setIsSectionHovered(true);
       }}
