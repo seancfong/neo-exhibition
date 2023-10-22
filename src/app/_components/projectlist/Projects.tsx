@@ -28,7 +28,10 @@ const Projects = ({ projects }: ProjectsProps) => {
       id="projects"
     >
       <NavbarRegion curSection={2} />
-      <h2 className="w-fit bg-gradient-to-r from-cpink to-cblue bg-clip-text py-2 text-[12vw] font-light lowercase leading-[12vw] tracking-wide text-transparent sm:text-7xl sm:leading-[5rem] lg:pb-10 lg:text-7xl 2xl:text-8xl">
+      <h3 className="relative -bottom-3 w-fit bg-gradient-to-r from-cpinklight to-cbluelight bg-clip-text font-museo text-2xl font-light leading-10 tracking-wide text-transparent 2xl:text-3xl">
+        All the featured
+      </h3>
+      <h2 className="w-fit py-2 text-[12vw] font-extralight lowercase leading-[12vw] tracking-wide text-light sm:text-7xl sm:leading-[5rem] lg:pb-10 lg:text-7xl 2xl:text-8xl">
         Projects
       </h2>
       {/* Projects List */}
@@ -40,9 +43,9 @@ const Projects = ({ projects }: ProjectsProps) => {
               className="grid max-w-xl grid-cols-[auto_repeat(6,1fr)] lg:max-w-3xl lg:grid-cols-[auto_repeat(9,1fr)_auto] 2xl:max-w-4xl"
             >
               {/* Desktop Decoration (r1, c1) */}
-              <div className="col-start-1 row-span-3 row-start-1 hidden w-4 rounded-l-lg bg-panel-darkest lg:block" />
+              <div className="col-start-1 row-span-2 row-start-1 hidden w-4 overflow-hidden rounded-tl-lg border-2 border-b-0 border-r-0 border-neutral-500 border-opacity-10 bg-panel-darkest lg:block" />
               {/* Date (r1, c1) */}
-              <div className="lg:px-l col-span-6 row-start-1 flex items-center gap-3 rounded-t-lg bg-panel-darkest px-5 py-2 lg:col-span-9 lg:col-start-2 lg:rounded-tl-none lg:pb-3 lg:pl-2">
+              <div className="lg:px-l col-span-6 row-start-1 flex items-center gap-3 rounded-t-lg border-2 border-b-0 border-l-0 border-neutral-500 border-opacity-10 bg-panel-darkest px-5 py-2 lg:col-span-9 lg:col-start-2 lg:rounded-tl-none lg:pb-3 lg:pl-2">
                 <span className="whitespace-nowrap text-dim">
                   {project?.date}
                 </span>
@@ -95,14 +98,14 @@ const Projects = ({ projects }: ProjectsProps) => {
               {/* Links (r3, c1) */}
               <ProjectLinks links={project?.links} />
               {/* Description (r3, c2) */}
-              <div className="col-span-6 col-start-2 row-start-3 flex flex-col gap-3 rounded-r-lg bg-panel-darkest pb-8 pt-6 text-light lg:col-span-9">
+              <div className="col-span-6 col-start-2 row-start-3 flex flex-col gap-3 rounded-r-lg border-b-2 border-r-2 border-neutral-500 border-opacity-10 bg-panel-darkest pb-8 pt-6 text-light shadow-panel lg:col-span-10 lg:rounded-bl-lg lg:rounded-br-none lg:border-l-2 lg:border-r-0">
                 {project?.award && (
                   <ProjectAward
                     description={project.award?.[0]?.awardDescription}
                     organization={project.award?.[0]?.organization}
                   />
                 )}
-                <div className="px-3 font-extralight leading-6 tracking-wider sm:px-5 lg:px-10 lg:text-xl lg:leading-8 2xl:text-2xl 2xl:leading-9">
+                <div className="px-3 text-lg font-extralight leading-7 tracking-wider sm:px-5 lg:px-10 lg:text-xl lg:leading-8 2xl:text-2xl 2xl:leading-9">
                   <AnimatedContent>
                     <PortableText
                       value={project?.description}

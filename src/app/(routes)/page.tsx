@@ -47,14 +47,15 @@ export default async function Home() {
   const { heroLinks, experiences, projects } = sanityData;
 
   return (
-    <main className="items-center bg-dark font-outfit">
+    <main className="items-center font-outfit">
       {/* Background Image */}
-      <div className="fixed left-0 top-0 z-0 h-full w-full">
+      <div className="gradient-home fixed left-0 top-0 z-0 h-full w-full">
         <Image
           src="/images/bg-waves.webp"
           alt=""
           fill
-          className="object-cover opacity-20"
+          className="object-cover opacity-[15%]"
+          priority
         />
       </div>
 

@@ -19,7 +19,7 @@ const HeroLinks = ({ links }: HeroLinkProps) => {
         {links.map((link: HeroSectionLink, i) => (
           <li
             key={link?.key ?? i}
-            className="h-20 w-20 rounded-lg bg-gradient-to-r from-cta-left to-cta-right"
+            className="h-20 w-20 rounded-lg bg-gradient-to-r from-cta-left to-cta-right shadow-[0px_0px_32px_rgba(74,72,157,0.20)]"
           >
             <Link
               href={link?.linkURL}
@@ -40,17 +40,14 @@ const HeroLinks = ({ links }: HeroLinkProps) => {
       </ul>
       {/* Desktop Links */}
       <ul
-        className="hidden gap-2 rounded-lg bg-opacity-20 bg-gradient-to-r from-cta-left to-cta-right lg:flex"
+        className="hidden gap-2 rounded-lg bg-opacity-20 bg-gradient-to-r from-cta-left to-cta-right shadow-[0px_0px_32px_rgba(74,72,157,0.40)] lg:flex"
         onMouseLeave={() => {
           setHoveredLink(-1);
         }}
       >
         {links.map((link: HeroSectionLink, i) => (
-          <>
-            <li
-              key={link?.key ?? i}
-              className="relative w-fit font-light lowercase tracking-wider text-light"
-            >
+          <React.Fragment key={link?.key ?? i}>
+            <li className="relative w-fit font-light lowercase tracking-wider text-light">
               <Link
                 href={link?.linkURL}
                 target="_blank"
@@ -74,15 +71,11 @@ const HeroLinks = ({ links }: HeroLinkProps) => {
             </li>
             {/* Bullet Point */}
             {i !== links.length - 1 && (
-              <li
-                key={`bullet-${i}`}
-                aria-hidden={true}
-                className="self-center text-gray-300"
-              >
+              <li aria-hidden={true} className="self-center text-gray-300">
                 <span>&#8226;</span>
               </li>
             )}
-          </>
+          </React.Fragment>
         ))}
       </ul>
     </>

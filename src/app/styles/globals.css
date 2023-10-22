@@ -7,6 +7,16 @@
     @apply min-h-screen px-6 py-5;
     height: 500px;
   }
+
+  .gradient-home {
+    background: linear-gradient(
+      315deg,
+      #242424 0%,
+      #363237 25%,
+      #333840 75%,
+      #242424 100%
+    );
+  }
 }
 
 @layer utilities {
