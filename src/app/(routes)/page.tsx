@@ -6,6 +6,7 @@ import Experience from "@/components/experience/Experience";
 import Projects from "@/components/projectlist/Projects";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import { Suspense } from "react";
 
 async function fetchCMSData() {
   const postQuery = `*[_type == "showcase"]{
@@ -55,7 +56,6 @@ export default async function Home() {
           alt=""
           fill
           className="object-cover opacity-[15%]"
-          priority
         />
       </div>
 

@@ -6,7 +6,7 @@ type AnimatedLettersProps = {
   className?: string;
   children: string;
   pb?: number;
-  tag: "p" | "h2" | "h4";
+  tag: "p" | "h2" | "h4" | "span";
   stagger?: number;
 };
 
@@ -40,6 +40,19 @@ export default function AnimatedLetters({
   };
 
   switch (tag) {
+    case "span":
+      return (
+        <motion.span
+          className={className}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={containerVariants}
+          aria-label={children}
+          ref={ref}
+        >
+          <AnimatedLettersContent text={children} pb={pb} />
+        </motion.span>
+      );
     case "p":
       return (
         <motion.p
