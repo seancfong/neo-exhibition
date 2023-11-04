@@ -48,6 +48,7 @@ export default function AnimatedLetters({
           animate={isInView ? "visible" : "hidden"}
           variants={containerVariants}
           aria-label={children}
+          custom={stagger}
           ref={ref}
         >
           <AnimatedLettersContent text={children} pb={pb} />
@@ -60,6 +61,7 @@ export default function AnimatedLetters({
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={containerVariants}
+          custom={stagger}
           aria-label={children}
           ref={ref}
         >
@@ -101,7 +103,7 @@ const AnimatedLettersContent = ({ text, pb }: AnimatedLettersContentProps) => {
           <span
             aria-hidden
             key={wi}
-            className="inline-block overflow-hidden whitespace-nowrap"
+            className="inline-block overflow-hidden whitespace-nowrap align-bottom"
             style={{ paddingBottom: `${pb ?? 0}px` }}
           >
             {word.split("").map((letter, i) => (

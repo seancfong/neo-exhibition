@@ -20,7 +20,6 @@ const About = ({ links }: AboutProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    console.log("page loaded");
     setIsLoading(false);
   }, []);
 
