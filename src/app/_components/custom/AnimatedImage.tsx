@@ -36,7 +36,7 @@ const AnimatedImage = ({
       objectFit="cover"
       style={{
         scale: isInView ? 1 : 1.1,
-        opacity: isInView ? 0.9 : 0.6,
+        opacity: isInView ? 0.7 : 0.3,
         transition: "all",
         transitionDuration: "1800ms",
         transitionTimingFunction: "cubic-bezier(0.65, 0, 0.35, 1)",

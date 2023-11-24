@@ -71,7 +71,7 @@ const Projects = ({ projects }: ProjectsProps) => {
                     sizes="100vw"
                     className="-z-20 object-cover"
                   />
-                  <div className="absolute left-0 top-0 -z-10 h-full w-full bg-gradient-to-b from-[rgba(205,205,205,0)] via-[rgba(105,105,105,0.7)] to-[rgba(54,54,54,0.8)] lg:rounded-bl-lg" />
+                  <div className="absolute left-0 top-0 -z-10 h-full w-full bg-gradient-to-b from-[rgba(35,35,35,0.3)] to-[rgba(24,24,24,0.8)] lg:rounded-bl-lg" />
                 </div>
                 <div className="relative z-10 flex flex-col justify-end">
                   <AnimatedLetters

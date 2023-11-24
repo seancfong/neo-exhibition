@@ -160,7 +160,7 @@ const About = ({ links }: AboutProps) => {
                 src="/icons/about/gridpattern.svg"
                 alt=""
                 fill
-                className="absolute rounded-[80px] object-cover"
+                className="mask-radial absolute rounded-[80px] object-cover"
               />
             </motion.div>
             {/* White Panel (r1, c1)*/}

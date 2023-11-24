@@ -56,7 +56,7 @@ const ExperienceCard = ({ experienceData }: ExperienceCardType) => {
             sizes="100vw"
             className="-z-20 rounded-br-none object-cover"
           />
-          <div className="absolute left-0 top-0 -z-10 h-full w-full rounded-lg rounded-br-none bg-gradient-to-r from-[rgba(41,41,41,0.9)] to-[rgba(91,84,84,0.4)]" />
+          <div className="absolute left-0 top-0 -z-10 h-full w-full rounded-lg rounded-br-none bg-gradient-to-r from-[rgba(21,21,24,0.8)] to-[rgba(41,44,44,0.6)]" />
         </div>
         <AnimatedLetters
           tag="h4"
